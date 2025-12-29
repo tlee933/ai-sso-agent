@@ -173,7 +173,7 @@ class AuditLog(Base):
     # Context
     ip_address = Column(String(45), nullable=True)
     user_agent = Column(String(500), nullable=True)
-    metadata = Column(Text, nullable=True)  # JSON for additional data
+    event_metadata = Column(Text, nullable=True)  # JSON for additional data
 
     # Timestamp
     created_at = Column(DateTime, default=datetime.utcnow, index=True)
