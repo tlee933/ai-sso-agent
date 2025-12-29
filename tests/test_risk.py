@@ -213,4 +213,5 @@ class TestRiskAssessor:
 
         # Should not update anything
         assert profile.usual_locations is None
-        assert profile.total_logins == 0
+        # total_logins should remain None (not initialized) when login fails
+        assert profile.total_logins is None or profile.total_logins == 0

@@ -34,9 +34,11 @@ class TestTOTPManager:
         uri = self.totp_manager.generate_provisioning_uri(email, secret)
 
         assert uri.startswith("otpauth://totp/")
-        assert email in uri
+        # Email is URL-encoded in URI (@ becomes %40)
+        assert "test%40example.com" in uri or email in uri
         assert secret in uri
-        assert self.totp_manager.issuer in uri
+        # Issuer is URL-encoded (spaces become %20)
+        assert "AI%20SSO%20Agent" in uri or self.totp_manager.issuer in uri
 
     def test_generate_qr_code(self):
         """Test QR code generation"""

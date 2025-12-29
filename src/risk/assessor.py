@@ -221,7 +221,10 @@ class RiskAssessor:
             user_profile.usual_days_of_week = json.dumps(days)
 
         # Update login count
-        user_profile.total_logins += 1
+        if user_profile.total_logins is None:
+            user_profile.total_logins = 1
+        else:
+            user_profile.total_logins += 1
 
         # Updated timestamp handled by SQLAlchemy
 
