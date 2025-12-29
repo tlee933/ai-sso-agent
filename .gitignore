@@ -1,0 +1,90 @@
+# AI SSO Agent - Git Ignore
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+ENV/
+env/
+.venv
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+ai_sso_agent.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.cache
+
+# Logs
+*.log
+logs/
+ai_sso_agent.log
+
+# Jupyter
+.ipynb_checkpoints
+
+# MyPy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Secrets
+secrets/
+*.pem
+*.key
+*.cert
+
+# QR Codes (generated)
+*.png
+qr_code.png
+
+# Backup files
+*.bak
+*.backup
+
+# OS
+Thumbs.db
